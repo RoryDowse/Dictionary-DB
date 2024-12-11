@@ -12,10 +12,12 @@ const dictionarySchema = new Schema<DictionaryDocument>({
     word: {
             type: String,
             required: true,
+            maxLength: 100,
         },
     meaning: {
-            type: String
+            type: String,
+            maxLength: 1000,
         }
-})
+    }, { timestamps: true });
 
 export default dictionarySchema;
