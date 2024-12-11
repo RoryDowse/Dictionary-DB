@@ -1,0 +1,20 @@
+{
+    "name": "dictionary-db",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server/dist/server.js",
+      "develop": "cd server && npm run watch",
+      "install": "cd server && npm i && cd ../client && npm i",
+      "build": "concurrently \"cd server && npm run build\" \"cd client && npm run build\"",
+      "render-build": "npm install && npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "concurrently": "^8.2.0"
+    }
+  }
+  
