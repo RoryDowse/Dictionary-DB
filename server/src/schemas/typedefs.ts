@@ -1,3 +1,4 @@
+// Define GraphQL type definitions using SDL (Schema Definition Language).
 const typeDefs = `
     type Dictionary {
         _id: ID!
