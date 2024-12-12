@@ -20,6 +20,10 @@ const dictionarySchema = new Schema<DictionaryDocument>({
         }
     }, { timestamps: true });
 
+
+// Add an index on the "word" field to improve query performance
+dictionarySchema.index({ word: 'text' });
+
 // Create a Mongoose model from the schema. The model provides methods to interact with the database.
 const Dictionary: Model<DictionaryDocument> = mongoose.model<DictionaryDocument>("Dictionary", dictionarySchema);
 

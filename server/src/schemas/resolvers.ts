@@ -33,6 +33,20 @@ const resolvers = {
                 throw new Error("Failed to fetch word meaning.");
             }
         },
+        // Resolver for the `getWordsByLetter` query, which fetches words starting with a specific letter.
+        getWordsByLetter: async (
+            _parent: unknown,
+            args: { letter: string }
+        ): Promise<DictionaryDocument[]> => {
+            try {
+                // Use the `find` method to fetch documents where the word starts with the provided letter (not case-sensitive).
+                const foundWordsByLetter = await Dictionary.find({ word: { $regex: `^${args.letter}/i` } });
+                return foundWordsByLetter;
+            } catch (error) {
+                console.error("Error fetching words by letter:", error);
+                throw new Error("Failed to fetch words by letter.");
+            }
+        },
     },
 };
 
