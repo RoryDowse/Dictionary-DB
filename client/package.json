@@ -4,14 +4,20 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-      "build": "tsc -b"
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
     },
     "dependencies": {
       "@apollo/client": "^3.7.10",
       "graphql": "^16.6.0"
     },
     "devDependencies": {
-
-    }
+      "@vitejs/plugin-react": "^4.2.1",
+      "vite": "^5.1.6"
+    },
+     "engines": {
+    "node": "20.x"
   }
+}
   

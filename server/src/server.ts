@@ -6,6 +6,7 @@ import { ApolloServer } from '@apollo/server'; // Note: Import from @apollo/serv
 import { expressMiddleware } from '@apollo/server/express4'; // Import Apollo's Express middleware for integrating ApolloServer with Express
 import { typeDefs, resolvers } from './schemas/index.js'; // Import GraphQL type definitions (typeDefs) and resolvers (functions to resolve GraphQL queries)
 import { fileURLToPath } from 'url';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename); 
 
@@ -30,14 +31,14 @@ const startApolloServer = async () => {
   // Apply ApolloServer middleware to handle GraphQL requests at the /graphql endpoint
   app.use('/graphql', expressMiddleware(server as any));
 
-//   // Serve static assets (for example, a React build) if in production mode
-//   if (process.env.NODE_ENV === 'production') {
-//     app.use(express.static(path.join(__dirname, '../../client/dist'))); // Serve static files from the React build directory
+  // Serve static assets (for example, a React build) if in production mode
+  if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../../client/dist'))); // Serve static files from the React build directory
 
-//     app.get('*', (_req: Request, res: Response) => {
-//       res.sendFile(path.join(__dirname, '../../client/dist/index.html')); // Send index.html for all other routes (client-side routing)
-//     });
-//   }
+    app.get('*', (_req: Request, res: Response) => {
+      res.sendFile(path.join(__dirname, '../../client/dist/index.html')); // Send index.html for all other routes (client-side routing)
+    });
+  }
 
   // Start the server and listen on the specified PORT
   app.listen(PORT, () => {
