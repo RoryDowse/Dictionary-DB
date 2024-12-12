@@ -1,4 +1,4 @@
-import { Schema, type Document } from 'mongoose';
+import mongoose, { Schema, Document, Model } from 'mongoose';
 
 // Typescript interface
 export interface DictionaryDocument extends Document {
@@ -20,4 +20,6 @@ const dictionarySchema = new Schema<DictionaryDocument>({
         }
     }, { timestamps: true });
 
-export default dictionarySchema;
+const Dictionary: Model<DictionaryDocument> = mongoose.model<DictionaryDocument>("Dictionary", dictionarySchema);
+
+export default Dictionary;

@@ -3,6 +3,14 @@ const typeDefs = `
         _id: ID!
         word: String!
         meaning: String
+        createdAt: String
+        updatedAt: String
+    }
+
+    type Query {
+        getAllWords: [Dictionary]
+        getWordMeaning(word: String!): Dictionary
+        getWordsByLetter(letter: String!): [Dictionary]
     }
 `;
 
