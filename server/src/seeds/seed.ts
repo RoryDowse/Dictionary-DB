@@ -12,35 +12,39 @@ const seedDictionary = async () => {
         await db();
         console.log('Seeding dictionary...');
 
+        // Clear existing data
+        // await DictionaryModel.deleteMany({});
+        // console.log('Existing dictionary cleared.');
+
         // Define the dictionary words and their meanings
         const dictionary = [
             {
-                word: "gnasche",
-                meaning: "the intense desire to bite deeply into the forearm of someone you love."
+                word: "serendipity",
+                meaning: "The occurrence of events by chance in a happy or beneficial way, bringing unexpected joy."
             },
             {
-                word: "adronitis",
-                meaning: "frustration with how long it takes to get to know someone—spending the first few weeks chatting in their psychological entryway, with each subsequent conversation like entering a different anteroom."
+                word: "sonder",
+                meaning: "The realization that each random passerby is living a life as vivid and complex as your own."
             },
             {
-                word: "kenopsia",
-                meaning: "the eerie, forlorn atmosphere of a place that’s usually bustling with people but is now abandoned and quiet—a school hallway in the evening, an unlit office on a weekend, vacant fairgrounds—an emotional."
+                word: "ubuntu",
+                meaning: "An African philosophy meaning 'I am because we are,' emphasizing shared humanity and compassion."
             },
             {
-                word: "dead reckoning",
-                meaning: "to find yourself bothered by someone’s death more than you would have expected, as if you assumed they would always be part of the landscape, like a lighthouse you could pass by for years until the night."
+                word: "elan",
+                meaning: "Energy, style, and enthusiasm; a spirited approach to life."
             },
             {
-                word: "ambedo",
-                meaning: "a kind of melancholic trance in which you become completely absorbed in vivid sensory details—raindrops skittering down a window, tall trees leaning in the wind, clouds of cream swirling in your coffee."
+                word: "eunoia",
+                meaning: "A state of goodwill and kindness towards others; beautiful thinking."
             },
             {
-                word: "adomania",
-                meaning: "the sense that the future is arriving ahead of schedule, that all those years with fantastical names like ‘2013’ are bursting from their hypothetical cages into the arena of the present, furiously bucking the grip of your expectations."
+                word: "solasta",
+                meaning: "Shining with brightness and radiance, illuminating everything around."
             },
             {
-                word: "semaphorism",
-                meaning: "a conversational hint that you have something personal to say on the subject but don’t go any further—an emphatic nod, a half-told anecdote, an enigmatic ‘I know the feeling'."
+                word: "felicity",
+                meaning: "Intense happiness; the ability to find appropriate expression for one’s thoughts."
             }
         ];
 
@@ -56,7 +60,7 @@ const seedDictionary = async () => {
         // Log any errors that occur during the seeding process
         console.error('Error seeding dictionary:', error);
     } finally {
-         // Ensure the database connection is closed even if an error occurs
+        // Ensure the database connection is closed even if an error occurs
         mongoose.disconnect();
     }
 };
