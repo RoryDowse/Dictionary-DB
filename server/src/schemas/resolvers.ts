@@ -39,8 +39,16 @@ const resolvers = {
             args: { letter: string }
         ): Promise<DictionaryDocument[]> => {
             try {
+                // Validate the input (single alphabetic character)
+                if (!/^[a-zA-Z]$/.test(args.letter)) {
+                    throw new Error('Invalid letter input. Please provide a single alphabetic character.');
+                }
+
                 // Use the `find` method to fetch documents where the word starts with the provided letter (not case-sensitive).
-                const foundWordsByLetter = await Dictionary.find({ word: { $regex: `^${args.letter}/i` } });
+                const foundWordsByLetter = await Dictionary.find({ 
+                    word: { $regex: `^${args.letter}`, $options: 'i' } 
+                });
+                
                 return foundWordsByLetter;
             } catch (error) {
                 console.error("Error fetching words by letter:", error);
