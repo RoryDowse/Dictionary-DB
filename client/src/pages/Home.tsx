@@ -1,15 +1,21 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
+import { FaBookReader } from "react-icons/fa";
+import { RxLetterCaseCapitalize } from "react-icons/rx";
+import './Home.css';
+
 
 const Home = () => {
     const navigate = useNavigate();
     return (
         <Container>
-            <h2>Search Dictionary</h2>
-                <Row className="mt-4">
-                    <Col>
+            <h2 className="mt-4 text-center">Search Dictionary</h2>
+                <Row className="mt-4 text-center">
+                    <Col md={4} sm={12} className="mb-3">
                         <Card>
                             <Card.Body>
+                                <FaSearch className="icon" />
                                 <Card.Title>
                                     All Words
                                 </Card.Title>
@@ -26,9 +32,10 @@ const Home = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col md={4} sm={12} className="mb-3">
                         <Card>
                             <Card.Body>
+                                <FaBookReader className="icon"/>
                                 <Card.Title>
                                     Word Meaning
                                 </Card.Title>
@@ -45,9 +52,10 @@ const Home = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
+                    <Col md={4} sm={12} className="mb-3">
                     <Card>
                         <Card.Body>
+                            <RxLetterCaseCapitalize className="icon" />
                             <Card.Title>
                                 Words By Letter
                             </Card.Title>

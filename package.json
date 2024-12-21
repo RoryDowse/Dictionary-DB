@@ -4,21 +4,23 @@
     "description": "",
     "main": "server/server.js",
     "scripts": {
-      "install": "cd server && npm i && cd ../client && npm i",
-      "build": "concurrently \"cd server && npm run build\" \"cd client && npm run build\"",
-      "cleandb": "cd server && npm run cleandb",
-      "seed": "cd server && npm run seed",
-      "develop": "concurrently \"npm run client:dev\" \"npm run server:dev\"",
-      "server:dev": "cd server && npm run watch",
-      "client:dev": "cd client && npm run dev",
-      "start": "cd server && npm run start",
-      "render-build": "npm install && npm run build"
+        "install": "cd server && npm i && cd ../client && npm i",
+        "build": "concurrently \"cd server && npm run build\" \"cd client && npm run build\"",
+        "cleandb": "cd server && npm run cleandb",
+        "seed": "cd server && npm run seed",
+        "develop": "concurrently \"npm run client:dev\" \"npm run server:dev\"",
+        "server:dev": "cd server && npm run watch",
+        "client:dev": "cd client && npm run dev",
+        "start": "cd server && npm run start",
+        "render-build": "npm install && npm run build"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-      "concurrently": "^8.2.0"
+        "concurrently": "^8.2.0"
+    },
+    "dependencies": {
+        "react-icons": "^5.4.0"
     }
-  }
-  
+}
