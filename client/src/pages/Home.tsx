@@ -14,13 +14,13 @@ const Home = () => {
                 <Row className="mt-4 text-center">
                     <Col md={4} sm={12} className="mb-3">
                         <Card>
-                            <Card.Body>
+                            <Card.Body className="py-4">
                                 <FaSearch className="icon" />
                                 <Card.Title>
                                     All Words
                                 </Card.Title>
                                 <Card.Text>
-                                    Search all words in the dictionary.
+                                    Search all words in the dictionary
                                 </Card.Text>
                                 <Button 
                                 variant="primary"
@@ -34,13 +34,13 @@ const Home = () => {
                     </Col>
                     <Col md={4} sm={12} className="mb-3">
                         <Card>
-                            <Card.Body>
+                            <Card.Body className="py-4">
                                 <FaBookReader className="icon"/>
                                 <Card.Title>
                                     Word Meaning
                                 </Card.Title>
                                 <Card.Text>
-                                    Search the meaning of a word in the dictionary.
+                                    Search the meaning of a word in the dictionary
                                 </Card.Text>
                                 <Button 
                                 variant="primary"
@@ -54,13 +54,13 @@ const Home = () => {
                     </Col>
                     <Col md={4} sm={12} className="mb-3">
                     <Card>
-                        <Card.Body>
+                        <Card.Body className="py-4">
                             <RxLetterCaseCapitalize className="icon" />
                             <Card.Title>
                                 Words By Letter
                             </Card.Title>
                             <Card.Text>
-                                Search words in the dictionary by letter.
+                                Search words in the dictionary by letter
                             </Card.Text>
                             <Button 
                             variant="primary"

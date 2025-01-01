@@ -1,8 +1,58 @@
+import { useState, useEffect } from "react";
+import { Table, Container, Spinner } from "react-bootstrap";
+import { useQuery } from "@apollo/client";
+import { GET_ALL_WORDS } from "../utils/queries";
+import ErrorPage from "./ErrorPage";
+import { Dictionary } from "../models/Dictionary";
+
 const SearchAllWords = () => {
+    const { loading, error, data } = useQuery(GET_ALL_WORDS);
+    const [words, setWords] = useState<Dictionary[]>([]);
+
+    useEffect(() => {
+        if (data && data.getAllWords) {
+            setWords(data.getAllWords);
+        }
+    }, [data]);
+
+    if (error) {
+        console.error("Error fetching words:", error);
+        return <ErrorPage />;
+    }
+
+    if (loading) {
+        return (
+            <Container className="text-center">
+                <Spinner animation="border" variant="primary" />
+            </Container>
+        );
+    }
+
+
     return (
-        <>
-            <h2>Search All Words</h2>
-        </>
+        <Container className="mt-4">
+            <h2 className="text-center">Search All Words</h2>
+            {words.length > 0 ? (
+                <Table striped bordered hover responsive>
+                    <thead>
+                        <tr>
+                            <th>Word</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {words.map((word) => (
+                            <tr key={word._id}>
+                                <td>{word.word}</td>
+                                <td>{word.meaning}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </Table>
+            ) : (
+                <p>No words found.</p>
+            )}
+        </Container>
     );
 };
 
