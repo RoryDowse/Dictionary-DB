@@ -23,6 +23,7 @@ export const GET_WORD_MEANING = gql`
 export const GET_WORDS_BY_LETTER = gql`
     query getWordsByLetter($letter: String!) {
         getWordsByLetter(letter: $letter) {
+            _id
            word
         }
     }

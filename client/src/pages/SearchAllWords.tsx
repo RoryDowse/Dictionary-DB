@@ -11,7 +11,7 @@ const SearchAllWords = () => {
 
     useEffect(() => {
         if (data && data.getAllWords) {
-            // alphabetize the words
+            // Alphabetize the words
             const sortedWords = [...data.getAllWords].sort((a, b) =>
                 a.word.localeCompare(b.word)  
             );
