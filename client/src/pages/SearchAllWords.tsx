@@ -11,7 +11,11 @@ const SearchAllWords = () => {
 
     useEffect(() => {
         if (data && data.getAllWords) {
-            setWords(data.getAllWords);
+            // alphabetize the words
+            const sortedWords = [...data.getAllWords].sort((a, b) =>
+                a.word.localeCompare(b.word)  
+            );
+            setWords(sortedWords);
         }
     }, [data]);
 
@@ -28,7 +32,6 @@ const SearchAllWords = () => {
         );
     }
 
-
     return (
         <Container className="mt-4">
             <h2 className="text-center">Search All Words</h2>
@@ -37,14 +40,12 @@ const SearchAllWords = () => {
                     <thead>
                         <tr>
                             <th>Word</th>
-                            <th>Meaning</th>
                         </tr>
                     </thead>
                     <tbody>
                         {words.map((word) => (
                             <tr key={word._id}>
                                 <td>{word.word}</td>
-                                <td>{word.meaning}</td>
                             </tr>
                         ))}
                     </tbody>

@@ -5,7 +5,6 @@ export const GET_ALL_WORDS = gql`
         getAllWords {
            _id
            word
-           meaning
            createdAt
            updatedAt 
         }
