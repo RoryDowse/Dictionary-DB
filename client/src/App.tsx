@@ -9,9 +9,8 @@ import {
 // Import Outlet from React Router for nested routes
 import { Outlet } from "react-router-dom";
 
-// Import the Header and Footer components
+// Import the Header component
 import Header from "./components/Header.tsx";
-import Footer from "./components/Footer.tsx";
 
 // Create an HTTP link to connect to the GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -33,7 +32,6 @@ function App() {
                 <main>
                     <Outlet />
                 </main>
-                <Footer />
             </div>
         </ApolloProvider>
     );
