@@ -60,19 +60,17 @@ const SearchWordMeaning = () => {
                         </Alert>
                     )}
 
-                    {!loading && !error && data?.getWordMeaning ? (
+                    {!loading && !error && data &&data.getWordMeaning && (
                         <div>
                             <h3>Word: {data.getWordMeaning.word}</h3>
                             <p>
                                 <strong>Meaning:</strong> {data.getWordMeaning.meaning}
                             </p>
                         </div>
-                    ) : (
-                        !loading &&
-                        !error &&
-                        !data?.getWordMeaning && (
+                    )}
+                    
+                    {!loading && !error && data && data.getWordMeaning.length === 0 && (
                             <p>No results found for "{searchTerm}". Please try another word.</p>
-                        )
                     )}
                 </>
             )}
