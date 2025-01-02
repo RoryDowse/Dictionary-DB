@@ -15,3 +15,24 @@
     transform: scale(1.02);
     transition: transform 0.3s ease;
 }
+
+@media (min-width: 768px) {
+    .h2-home {
+        position: absolute;
+        top: 30%; 
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+    .center-cards {
+        position: relative; /* Establishes a positioning context */
+        height: 80vh;
+    }
+
+    .center-cards .row {
+        position: absolute; /* Positions the row relative to the parent */
+        top: 50%; /* Moves the row halfway down the container */
+        left: 50%; /* Moves the row halfway across the container */
+        transform: translate(-50%, -50%); 
+        width: 100%; /* Ensures the row spans the container width */
+    }
+}

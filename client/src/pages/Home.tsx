@@ -10,7 +10,8 @@ const Home = () => {
     const navigate = useNavigate();
     return (
         <Container>
-            <h2 className="mt-4 text-center">Search Dictionary</h2>
+            <h2 className="mt-4 text-center h2-home">Search Dictionary</h2>
+            <div className="center-cards">
                 <Row className="mt-4 text-center">
                     <Col md={4} sm={12} className="mb-3">
                         <Card className='glass-card'>
@@ -76,6 +77,7 @@ const Home = () => {
                         </Card>
                     </Col>
                 </Row>
+            </div>
         </Container>
     );
 };

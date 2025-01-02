@@ -53,10 +53,8 @@ const SearchWordMeaning = () => {
 
                     {error && (
                         <Alert variant="danger">
-                            <p>
-                                Error searching for "<strong>{searchTerm}</strong>": {error.message}
-                            </p>
-                            <p>Please try again or verify the word exists in the dictionary.</p>
+                            <p className="mt-3">
+                                Sorry, I could not find "<strong>{searchTerm}</strong>". Does it exist in this dictionary?</p>
                         </Alert>
                     )}
 
