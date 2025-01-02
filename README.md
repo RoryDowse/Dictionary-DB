@@ -6,9 +6,11 @@
 ## Description
 This project was motivated by my desire to deepen my understanding of the MERN stack, with a particular focus on Mongoose and its role in managing MongoDB databases. I wanted to apply and strengthen the skills I developed during my coding bootcamp by building a functional and purposeful application. Creating a dictionary API provided an excellent opportunity to design efficient database schemas, write resolvers, and test GraphQL queries while solving a practical problem.
 
-The application addresses the need for retrieving dictionary data in a flexible and efficient way. Users can fetch all stored words, look up the meaning of a specific word, or find words that start with a specific letter. These features demonstrate how back-end technologies can seamlessly handle structured data queries.
+The application addresses the need for retrieving dictionary data in a flexible and efficient way. Users can fetch all stored words, look up the meaning of a specific word, or find words that start with a specific letter. These features demonstrate how back-end technologies can seamlessly handle structured data queries with intuitive front-end interfaces.
 
-Through this project, I learned how to structure a back-end application using Mongoose, convert SQL schema and seeds into Mongoose models and documents, and build GraphQL resolvers for complex queries. Additionally, I gained valuable experience in unit testing, integration testing, and debugging to ensure API functionality.
+Through this project, I learned how to structure a back-end application using Mongoose, convert SQL schema and seeds into Mongoose models and documents, and build GraphQL resolvers for complex queries.
+
+Deployed Link: https://dictionary-db.onrender.com
 
 ## Table of Contents
 - [Installation](#installation)
@@ -97,7 +99,14 @@ Then:
 	- Add a letter that exists in the dictionary to the Variables input
 	- Run "getWordsByLetter", i.e. "e"
 
-![screenshot](assets/images/screenshot.png).
+GraphQL Sandbox:
+
+![GraphQL Screenshot](assets/images/screenshot.png)
+
+Homepage:
+
+![Homepage Screenshot](assets/images/homepage.png)
+
 
 ## License
 This project is licensed under the MIT license.
