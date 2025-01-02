@@ -24,12 +24,13 @@ const SearchWordMeaning = () => {
     };
 
     return (
-        <Container className="mt-4 text-center" style={{ padding: '0 10%' }}>
+        <Container className="mt-4 text-center" style={{ padding: "0 10%" }}>
             <h2 className="text-center">Search Word Meaning</h2>
             <Form onSubmit={handleSubmit} className="mb-4">
                 <Form.Group controlId="word">
                     <Form.Label className="mb-2">Enter a word to search for its meaning:</Form.Label>
                     <Form.Control
+                        className="text-center"
                         type="text"
                         value={word}
                         onChange={handleChange}
@@ -54,7 +55,13 @@ const SearchWordMeaning = () => {
                     {error && (
                         <Alert variant="danger">
                             <p className="mt-3">
-                                Sorry, I could not find "<strong>{searchTerm}</strong>". Does it exist in this dictionary?</p>
+                                Sorry, I could not find "<strong>{searchTerm}</strong>". Does it exist in this dictionary?
+                            </p>
+                            <a href={`/search-all-words`} className="error-link">
+                                <Button className="button">
+                                Search All Words
+                                </Button>
+                            </a>
                         </Alert>
                     )}
 

@@ -24,12 +24,13 @@ const SearchWordsByLetter = () => {
     };
 
     return (
-        <Container className="mt-4 text-center" style={{ padding: '0 10%' }}>
+        <Container className="mt-4 text-center" style={{ padding: "0 10%" }}>
             <h2 className="text-center">Search Words By Letter</h2>
             <Form onSubmit={handleSubmit} className="mb-4">
                 <Form.Group controlId="letter">
                     <Form.Label className="mb-2">Enter a letter to search for words:</Form.Label>
                     <Form.Control
+                        className="text-center"
                         type="text"
                         value={letter}
                         maxLength={1}
