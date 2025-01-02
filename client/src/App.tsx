@@ -27,7 +27,7 @@ const client = new ApolloClient({
 function App() {
     return (
         <ApolloProvider client={client}>
-            <div>
+            <div className='background-container'>
                 <Header />
                 <main>
                     <Outlet />

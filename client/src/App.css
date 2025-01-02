@@ -1,9 +1,26 @@
+:root {
+    background-color: #212121;
+}
+
+body {
+    color: #ffffff;
+}
+
 h1 {
     font-size: 3rem;
     text-align: center;
-    margin-top: 20px;
+    padding-top: 30px;
 }
 
 h2 {
     margin-bottom: 2rem;
+}
+
+.background-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./public/assets/images/background.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
 }
