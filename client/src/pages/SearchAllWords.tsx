@@ -33,7 +33,7 @@ const SearchAllWords = () => {
     }
 
     return (
-        <Container className="mt-4">
+        <Container className="mt-4 text-center" style={{ padding: '0 10%' }}>
             <h2 className="text-center">Search All Words</h2>
             {words.length > 0 ? (
                 <Table striped bordered hover responsive>
