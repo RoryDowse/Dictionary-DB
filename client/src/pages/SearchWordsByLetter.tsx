@@ -16,7 +16,7 @@ const SearchWordsByLetter = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        setSearchLetter(letter.trim()); // Trigger the search when the form is submitted
+        setSearchLetter(letter.trim().toLowerCase()); // Trigger the search when the form is submitted
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

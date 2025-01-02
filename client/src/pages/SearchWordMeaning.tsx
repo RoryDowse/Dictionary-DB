@@ -16,7 +16,7 @@ const SearchWordMeaning = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        setSearchTerm(word.trim()); // Trigger the search when the form is submitted
+        setSearchTerm(word.trim().toLowerCase()); // Trigger the search when the form is submitted
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
