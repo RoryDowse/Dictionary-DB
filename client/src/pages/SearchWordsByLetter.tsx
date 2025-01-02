@@ -38,7 +38,7 @@ const SearchWordsByLetter = () => {
                         placeholder="Please enter a single letter"
                     />
                 </Form.Group>
-                <Button type="submit" variant="primary" className="mt-3">
+                <Button type="submit" variant="primary" className=" button mt-3">
                     Search
                 </Button>
             </Form>

@@ -24,6 +24,7 @@ const Home = () => {
                                 </Card.Text>
                                 <Button 
                                 variant="primary"
+                                className="button"
                                 aria-label="Search all words in the dictionary"
                                 onClick={() => navigate('/search-all-words')}
                                 >
@@ -44,6 +45,7 @@ const Home = () => {
                                 </Card.Text>
                                 <Button 
                                 variant="primary"
+                                className="button"
                                 aria-label="Search the meaning of a word in the dictionary"
                                 onClick={() => navigate('/search-word-meaning')}
                                 >
@@ -64,6 +66,7 @@ const Home = () => {
                             </Card.Text>
                             <Button 
                             variant="primary"
+                            className="button"
                             aria-label="Search words in the dictionary by letter"
                             onClick={() => navigate('/search-words-by-letter')}
                             >

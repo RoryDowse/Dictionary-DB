@@ -36,7 +36,7 @@ const SearchWordMeaning = () => {
                         placeholder="Enter a word"
                     />
                 </Form.Group>
-                <Button type="submit" variant="primary" className="mt-3">
+                <Button type="submit" variant="primary" className="mt-3 button">
                     Search
                 </Button>
             </Form>
