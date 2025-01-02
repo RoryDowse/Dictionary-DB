@@ -1,5 +1,26 @@
-.icon {
-    font-size: 2rem;
+.glass-card {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(0px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    border: 0px solid rgba(255, 255, 255, 0.3); /* Optional border */
+    border-radius: 10px; /* Rounded corners for aesthetic */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Prevents child elements from overflowing */
+    color: white; /* Ensures text is readable on translucent background */
+}
+
+.glass-card .icon {
+    font-size: 2rem; /* Adjust icon size */
     margin: 10px 0;
-    color: #007bff;
+    color: white; /* White or a matching color */
+}
+
+.glass-card .btn-primary {
+    background-color: black; /* Customize button color */
+    border: none; /* Optional: Removes button border */
+}
+
+.glass-card:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease; /* Smooth hover animation */
 }

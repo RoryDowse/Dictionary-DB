@@ -13,7 +13,7 @@ const Home = () => {
             <h2 className="mt-4 text-center">Search Dictionary</h2>
                 <Row className="mt-4 text-center">
                     <Col md={4} sm={12} className="mb-3">
-                        <Card>
+                        <Card className='glass-card'>
                             <Card.Body className="py-4">
                                 <FaSearch className="icon" />
                                 <Card.Title>
@@ -33,7 +33,7 @@ const Home = () => {
                         </Card>
                     </Col>
                     <Col md={4} sm={12} className="mb-3">
-                        <Card>
+                        <Card className='glass-card'>
                             <Card.Body className="py-4">
                                 <FaBookReader className="icon"/>
                                 <Card.Title>
@@ -53,7 +53,7 @@ const Home = () => {
                         </Card>
                     </Col>
                     <Col md={4} sm={12} className="mb-3">
-                    <Card>
+                    <Card className='glass-card'>
                         <Card.Body className="py-4">
                             <RxLetterCaseCapitalize className="icon" />
                             <Card.Title>
