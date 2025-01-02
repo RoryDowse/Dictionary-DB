@@ -26,8 +26,8 @@ const SearchAllWords = () => {
 
     if (loading) {
         return (
-            <Container className="text-center">
-                <Spinner animation="border" variant="primary" />
+            <Container className="text-center mt-5">
+                <Spinner animation="border" style={{ color: 'white' }} />
             </Container>
         );
     }
